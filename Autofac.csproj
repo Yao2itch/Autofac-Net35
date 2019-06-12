@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37FB86BF-4F7C-49E2-9A4D-A48F5D545716}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Autofac</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Autofac\Util\AssemblyExtensions.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\FactoryGenerator.cs" />
+    <Compile Include="Autofac\Builder\ReflectionActivatorData.cs" />
+    <Compile Include="Autofac\Builder\IConcreteActivatorData.cs" />
+    <Compile Include="Autofac\Builder\ConcreteReflectionActivatorData.cs" />
+    <Compile Include="Autofac\Builder\ContainerBuildOptions.cs" />
+    <Compile Include="Autofac\Builder\IRegistrationBuilder!3.cs" />
+    <Compile Include="Autofac\Builder\MetadataConfiguration!1.cs" />
+    <Compile Include="Autofac\Core\IComponentRegistry.cs" />
+    <Compile Include="Autofac\Core\Registration\CopyOnWriteRegistry.cs" />
+    <Compile Include="Autofac\Core\IRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\Variance\ContravariantRegistrationSource.cs" />
+    <Compile Include="Autofac\PropertyWiringFlags.cs" />
+    <Compile Include="Autofac\Builder\RegistrationBuilder.cs" />
+    <Compile Include="Autofac\Builder\RegistrationBuilderResources.cs" />
+    <Compile Include="Autofac\Builder\RegistrationExtensions.cs" />
+    <Compile Include="Autofac\ContainerBuilderResources.cs" />
+    <Compile Include="Autofac\Core\Activators\Delegate\DelegateActivatorResources.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\BindingFlagsConstructorFinderResources.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\ConstructorParameterBindingResources.cs" />
+    <Compile Include="Autofac\Core\Parameter.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\DefaultValueParameter.cs" />
+    <Compile Include="Autofac\Core\ContainerResources.cs" />
+    <Compile Include="Autofac\Core\Diagnostics\IContainerAwareComponent.cs" />
+    <Compile Include="Autofac\Core\IActivatedEventArgs!1.cs" />
+    <Compile Include="Autofac\Core\IActivatingEventArgs!1.cs" />
+    <Compile Include="Autofac\Core\IServiceWithType.cs" />
+    <Compile Include="Autofac\Core\Service.cs" />
+    <Compile Include="Autofac\Core\KeyedService.cs" />
+    <Compile Include="Autofac\Core\Lifetime\LifetimeScopeBeginningEventArgs.cs" />
+    <Compile Include="Autofac\Core\Lifetime\LifetimeScopeEndingEventArgs.cs" />
+    <Compile Include="Autofac\Core\Lifetime\LifetimeScopeResources.cs" />
+    <Compile Include="Autofac\Core\RegistrationSourceAddedEventArgs.cs" />
+    <Compile Include="Autofac\Core\Resolving\IInstanceLookup.cs" />
+    <Compile Include="Autofac\Core\Resolving\InstanceLookupCompletionBeginningEventArgs.cs" />
+    <Compile Include="Autofac\Core\Resolving\InstanceLookupCompletionEndingEventArgs.cs" />
+    <Compile Include="Autofac\Core\Resolving\InstanceLookupEndingEventArgs.cs" />
+    <Compile Include="Autofac\Core\Resolving\InstanceLookupBeginningEventArgs.cs" />
+    <Compile Include="Autofac\Core\Resolving\ResolveOperationBeginningEventArgs.cs" />
+    <Compile Include="Autofac\Core\Registration\AdaptationSandbox.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentRegistrationExtensions.cs" />
+    <Compile Include="Autofac\Util\Disposable.cs" />
+    <Compile Include="Autofac\Core\IComponentRegistration.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentRegistrationLifetimeDecorator.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentRegistrationResources.cs" />
+    <Compile Include="Autofac\Core\Registration\ExternalRegistrySource.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentRegistry.cs" />
+    <Compile Include="Autofac\Core\Registration\ScopeRestrictedRegistry.cs" />
+    <Compile Include="Autofac\Core\Registration\ServiceRegistrationInfo.cs" />
+    <Compile Include="Autofac\Core\Registration\ServiceRegistrationInfoResources.cs" />
+    <Compile Include="Autofac\Core\Resolving\ComponentActivationResources.cs" />
+    <Compile Include="Autofac\Core\Resolving\ResolveOperationEndingEventArgs.cs" />
+    <Compile Include="Autofac\Core\ServiceResources.cs" />
+    <Compile Include="Autofac\Features\Collections\CollectionRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\LazyDependencies\LazyRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\LightweightAdapters\LightweightAdapterActivatorData.cs" />
+    <Compile Include="Autofac\Features\LightweightAdapters\LightweightAdapterRegistrationExtensions.cs" />
+    <Compile Include="Autofac\Features\LightweightAdapters\LightweightAdapterRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\LightweightAdapters\LightweightAdapterRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\Collections\CollectionRegistrationExtensions.cs" />
+    <Compile Include="Autofac\Builder\DynamicRegistrationStyle.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\GeneratedFactoryActivatorData.cs" />
+    <Compile Include="Autofac\Builder\IHideObjectMembers.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\ParameterMapping.cs" />
+    <Compile Include="Autofac\Features\Indexed\IIndex!2.cs" />
+    <Compile Include="Autofac\Features\Indexed\KeyedServiceIndex!2.cs" />
+    <Compile Include="Autofac\Features\Metadata\MetaRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\Metadata\Meta!1.cs" />
+    <Compile Include="Autofac\Features\Metadata\MetaRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericDecoratorActivatorDataResources.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericServiceBinder.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericDecoratorActivatorData.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericDecoratorRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericDecoratorRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericRegistrationExtensions.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericRegistrationExtensionsResources.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericServiceBinderResources.cs" />
+    <Compile Include="Autofac\Features\OwnedInstances\OwnedInstanceRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Features\ResolveAnything\AnyConcreteTypeNotAlreadyRegisteredSource.cs" />
+    <Compile Include="Autofac\Features\ResolveAnything\AnyConcreteTypeNotAlreadyRegisteredSourceResources.cs" />
+    <Compile Include="Autofac\Features\Scanning\ScanningActivatorData.cs" />
+    <Compile Include="Autofac\Core\ActivatedEventArgs!1.cs" />
+    <Compile Include="Autofac\Core\ActivatingEventArgs!1.cs" />
+    <Compile Include="Autofac\Core\Activators\InstanceActivator.cs" />
+    <Compile Include="Autofac\Core\IInstanceActivator.cs" />
+    <Compile Include="Autofac\Core\Activators\Delegate\DelegateActivator.cs" />
+    <Compile Include="Autofac\Core\Activators\ProvidedInstance\ProvidedInstanceActivator.cs" />
+    <Compile Include="Autofac\Core\Activators\ProvidedInstance\ProvidedInstanceActivatorResources.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\AutowiringParameter.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\AutowiringPropertyInjector.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\IConstructorFinder.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\BindingFlagsConstructorFinder.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\ConstructorParameterBinding.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\IConstructorSelector.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\MatchingSignatureConstructorSelector.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\MatchingSignatureConstructorSelectorResources.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\MostParametersConstructorSelector.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\ReflectionActivator.cs" />
+    <Compile Include="Autofac\Core\Activators\Reflection\ReflectionActivatorResources.cs" />
+    <Compile Include="Autofac\Core\ConstantParameter.cs" />
+    <Compile Include="Autofac\IComponentContext.cs" />
+    <Compile Include="Autofac\ILifetimeScope.cs" />
+    <Compile Include="Autofac\IContainer.cs" />
+    <Compile Include="Autofac\Core\Container.cs" />
+    <Compile Include="Autofac\Core\DependencyResolutionException.cs" />
+    <Compile Include="Autofac\Core\IDisposer.cs" />
+    <Compile Include="Autofac\Core\Disposer.cs" />
+    <Compile Include="Autofac\Core\IComponentLifetime.cs" />
+    <Compile Include="Autofac\Core\IModule.cs" />
+    <Compile Include="Autofac\Core\InstanceOwnership.cs" />
+    <Compile Include="Autofac\Core\InstanceSharing.cs" />
+    <Compile Include="Autofac\Core\ISharingLifetimeScope.cs" />
+    <Compile Include="Autofac\Core\Lifetime\CurrentScopeLifetime.cs" />
+    <Compile Include="Autofac\Core\Lifetime\LifetimeScope.cs" />
+    <Compile Include="Autofac\Core\Lifetime\MatchingScopeLifetime.cs" />
+    <Compile Include="Autofac\Core\Lifetime\MatchingScopeLifetimeResources.cs" />
+    <Compile Include="Autofac\Core\Lifetime\RootScopeLifetime.cs" />
+    <Compile Include="Autofac\Core\NamedPropertyParameter.cs" />
+    <Compile Include="Autofac\Core\PreparingEventArgs.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentNotRegisteredException.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentNotRegisteredExceptionResources.cs" />
+    <Compile Include="Autofac\Core\ComponentRegisteredEventArgs.cs" />
+    <Compile Include="Autofac\Core\Registration\ComponentRegistration.cs" />
+    <Compile Include="Autofac\Core\Resolving\CircularDependencyDetector.cs" />
+    <Compile Include="Autofac\Core\Resolving\CircularDependencyDetectorResources.cs" />
+    <Compile Include="Autofac\Core\Resolving\InstanceLookup.cs" />
+    <Compile Include="Autofac\Core\Resolving\IResolveOperation.cs" />
+    <Compile Include="Autofac\Core\Resolving\ResolveOperation.cs" />
+    <Compile Include="Autofac\Core\Resolving\ResolveOperationResources.cs" />
+    <Compile Include="Autofac\Core\TypedService.cs" />
+    <Compile Include="Autofac\Core\UniqueService.cs" />
+    <Compile Include="Autofac\Features\Collections\CollectionRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\GeneratedFactoryRegistrationExtensions.cs" />
+    <Compile Include="Autofac\Features\OpenGenerics\OpenGenericRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\OwnedInstances\Owned!1.cs" />
+    <Compile Include="Autofac\Features\OwnedInstances\OwnedInstanceRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\Scanning\ScanningRegistrationExtensions.cs" />
+    <Compile Include="Autofac\IStartable.cs" />
+    <Compile Include="Autofac\Module.cs" />
+    <Compile Include="Autofac\Builder\RegistrationBuilder!3.cs" />
+    <Compile Include="Autofac\Builder\RegistrationData.cs" />
+    <Compile Include="Autofac\RegistrationExtensions.cs" />
+    <Compile Include="Autofac\RegistrationExtensionsResources.cs" />
+    <Compile Include="Autofac\Builder\SimpleActivatorData.cs" />
+    <Compile Include="Autofac\Builder\SingleRegistrationStyle.cs" />
+    <Compile Include="Autofac\ContainerBuilder.cs" />
+    <Compile Include="Autofac\NamedParameter.cs" />
+    <Compile Include="Autofac\ParameterExtensions.cs" />
+    <Compile Include="Autofac\PositionalParameter.cs" />
+    <Compile Include="Autofac\ResolutionExtensions.cs" />
+    <Compile Include="Autofac\Core\ResolvedParameter.cs" />
+    <Compile Include="Autofac\TypedParameter.cs" />
+    <Compile Include="Autofac\TypeExtensions.cs" />
+    <Compile Include="Autofac\TypeExtensionsResources.cs" />
+    <Compile Include="Autofac\Util\Enforce.cs" />
+    <Compile Include="Autofac\Util\EnforceResources.cs" />
+    <Compile Include="Autofac\Util\ReflectionExtensions.cs" />
+    <Compile Include="Autofac\Util\ReflectionExtensionsResources.cs" />
+    <Compile Include="Autofac\Util\ReleaseAction.cs" />
+    <Compile Include="Autofac\Util\SequenceExtensions.cs" />
+    <Compile Include="Autofac\Util\Traverse.cs" />
+    <Compile Include="Autofac\Util\TypeExtensions.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\GeneratedFactoryRegistrationSource.cs" />
+    <Compile Include="Autofac\Features\GeneratedFactories\GeneratedFactoryRegistrationSourceResources.cs" />
+    <Compile Include="Autofac\Util\WindowsPhone\Wp7Extensions.cs" />
+    <Compile Include="Autofac\Util\WindowsPhone\Wp7FactoryGenerator.cs" />
+    <EmbeddedResource Include="Autofac.Features.GeneratedFactories.GeneratedFactoryRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Builder.RegistrationBuilderResources.resources" />
+    <EmbeddedResource Include="Autofac.ContainerBuilderResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.Delegate.DelegateActivatorResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.ProvidedInstance.ProvidedInstanceActivatorResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.Reflection.BindingFlagsConstructorFinderResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.Reflection.ConstructorParameterBindingResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.Reflection.MatchingSignatureConstructorSelectorResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Activators.Reflection.ReflectionActivatorResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.ContainerResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Lifetime.LifetimeScopeResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Lifetime.MatchingScopeLifetimeResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Registration.ComponentNotRegisteredExceptionResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Registration.ComponentRegistrationResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Registration.ServiceRegistrationInfoResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Resolving.CircularDependencyDetectorResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Resolving.ComponentActivationResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.Resolving.ResolveOperationResources.resources" />
+    <EmbeddedResource Include="Autofac.Core.ServiceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.Collections.CollectionRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.LazyDependencies.LazyRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.LightweightAdapters.LightweightAdapterRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.Metadata.MetaRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OpenGenerics.OpenGenericDecoratorActivatorDataResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OpenGenerics.OpenGenericDecoratorRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensionsResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OpenGenerics.OpenGenericRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OpenGenerics.OpenGenericServiceBinderResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.OwnedInstances.OwnedInstanceRegistrationSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.Features.ResolveAnything.AnyConcreteTypeNotAlreadyRegisteredSourceResources.resources" />
+    <EmbeddedResource Include="Autofac.RegistrationExtensionsResources.resources" />
+    <EmbeddedResource Include="Autofac.TypeExtensionsResources.resources" />
+    <EmbeddedResource Include="Autofac.Util.EnforceResources.resources" />
+    <EmbeddedResource Include="Autofac.Util.ReflectionExtensionsResources.resources" />
+  </ItemGroup>
+</Project>
